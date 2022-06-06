@@ -8,6 +8,7 @@
         "scalafix",
         "scalatest",
         "Scalatra",
+        "scoverage",
         "Semanticdb",
         "Servlet",
         "xsbt",
