@@ -6,6 +6,7 @@
         "javax",
         "logback",
         "scalafix",
+        "scalafmt",
         "scalatest",
         "Scalatra",
         "scoverage",
