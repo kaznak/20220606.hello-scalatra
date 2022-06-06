@@ -3,6 +3,9 @@
         "**/target": true
     },
     "cSpell.words": [
+        "javax",
+        "logback",
+        "scalatest",
         "Scalatra",
         "Servlet"
     ]
