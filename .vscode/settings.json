@@ -10,6 +10,7 @@
         "Scalatra",
         "Semanticdb",
         "Servlet",
-        "xsbt"
+        "xsbt",
+        "Ywarn"
     ]
 }
