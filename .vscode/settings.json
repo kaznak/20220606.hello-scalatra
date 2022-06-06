@@ -3,6 +3,7 @@
         "**/target": true
     },
     "cSpell.words": [
-        "Scalatra"
+        "Scalatra",
+        "Servlet"
     ]
 }
