@@ -9,6 +9,7 @@
         "scalatest",
         "Scalatra",
         "Semanticdb",
-        "Servlet"
+        "Servlet",
+        "xsbt"
     ]
 }
