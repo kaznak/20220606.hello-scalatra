@@ -1,11 +1,9 @@
 val ScalatraVersion = "2.8.2"
 
-ThisBuild / scalaVersion := "2.13.4"
-ThisBuild / organization := "com.github.kaznak"
-
 inThisBuild(
   List(
-    scalaVersion := "2.13.4",
+    scalaVersion := "2.13.8",
+    organization := "com.github.kaznak",
     semanticdbEnabled := true,
     semanticdbVersion := scalafixSemanticdb.revision
   )
