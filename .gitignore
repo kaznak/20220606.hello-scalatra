@@ -69,7 +69,7 @@ jrebel.lic
 # metals
 .metals
 .bloop
-project/metals.sbt
+metals.sbt
 
 # paulp script
 /.lib/
