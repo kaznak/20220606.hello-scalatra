@@ -8,4 +8,8 @@ class BlogServlet extends ScalatraServlet {
     views.html.hello()
   }
 
+  get("/hi-there") {
+    "Hi there!"
+  }
+
 }
