@@ -18,3 +18,4 @@ If `browse` doesn't launch your browser, manually open [http://localhost:8080/](
 - [scalafmt](https://scalameta.org/scalafmt/)
 - [scalafix](https://scalacenter.github.io/scalafix/)
 - [scalatest](https://www.scalatest.org/)
+- [scoverage](https://github.com/scoverage/sbt-scoverage)
