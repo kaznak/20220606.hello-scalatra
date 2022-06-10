@@ -17,6 +17,7 @@ lazy val hello = (project in file("."))
       "org.scalatra" %% "scalatra" % ScalatraVersion,
       "org.scalatra" %% "scalatra-scalatest" % ScalatraVersion % "test",
       "ch.qos.logback" % "logback-classic" % "1.2.11" % "runtime",
+      "com.github.pureconfig" %% "pureconfig" % "0.17.1",
       "org.eclipse.jetty" % "jetty-webapp" % "11.0.9" % "container",
       "javax.servlet" % "javax.servlet-api" % "4.0.1" % "provided"
     ),
