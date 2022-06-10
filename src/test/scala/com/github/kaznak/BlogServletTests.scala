@@ -1,8 +1,10 @@
 package com.github.kaznak
 
 import org.scalatra.test.scalatest._
+import com.github.kaznak.util.Config
 
 class BlogServletTests extends ScalatraFunSuite {
+  val serverConfig = Config.load(None)
 
   addServlet(classOf[BlogServlet], "/*")
 
@@ -12,4 +14,10 @@ class BlogServletTests extends ScalatraFunSuite {
     }
   }
 
+  test("GET /hi-there on BlogServlet should return the message in the configuration file") {
+    get("/hi-there") {
+      status should equal(200)
+      assert(response.body.contentEquals(serverConfig.hiThereMessage))
+    }
+  }
 }
