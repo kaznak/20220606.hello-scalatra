@@ -1,12 +1,12 @@
 package com.github.kaznak
 
 import org.scalatra.test.scalatest._
-import com.github.kaznak.util.Config
+import com.github.kaznak.util.{Config, ServerConfig}
 
 class BlogServletTests extends ScalatraFunSuite {
-  val serverConfig = Config.load(None)
+  val serverConfig: ServerConfig = Config.load(None)
 
-  addServlet(classOf[BlogServlet], "/*")
+  addServlet(new BlogServlet(serverConfig), "/*")
 
   test("GET / on BlogServlet should return status 200") {
     get("/") {
@@ -14,10 +14,12 @@ class BlogServletTests extends ScalatraFunSuite {
     }
   }
 
-  test("GET /hi-there on BlogServlet should return the message in the configuration file") {
+  test(
+    "GET /hi-there on BlogServlet should return the message in the configuration file"
+  ) {
     get("/hi-there") {
       status should equal(200)
-      assert(response.body.contentEquals(serverConfig.hiThereMessage))
+      response.body should equal(serverConfig.hiThereMessage)
     }
   }
 }
