@@ -4,7 +4,8 @@ import pureconfig.ConfigSource
 import pureconfig.ConfigSource.resources
 import pureconfig.error.ConfigReaderFailures
 
-class ConfigException(failures: ConfigReaderFailures) extends Exception(failures.prettyPrint())
+class ConfigException(failures: ConfigReaderFailures)
+    extends Exception(failures.prettyPrint())
 
 case class ServerConfig(
     hiThereMessage: String
@@ -12,17 +13,16 @@ case class ServerConfig(
 
 object Config {
   import pureconfig.generic.auto._
-  def load(name: Option[String]): ServerConfig =
-    name match {
-      case Some(config) =>
-        ConfigSource.default(resources(config)).load[ServerConfig] match {
-          case Right(c) => c
-          case Left(es) => throw new ConfigException(es)
-        }
+  def load(name: Option[String]): ServerConfig = {
+    val configObjSrc = name match {
+      case Some(c) =>
+        ConfigSource.default(resources(c))
       case None =>
-        ConfigSource.default.load[ServerConfig] match {
-          case Right(c) => c
-          case Left(es) => throw new ConfigException(es)
-        }
+        ConfigSource.default
     }
+    configObjSrc.load[ServerConfig] match {
+      case Right(c) => c
+      case Left(e)  => throw new ConfigException(e)
+    }
+  }
 }
