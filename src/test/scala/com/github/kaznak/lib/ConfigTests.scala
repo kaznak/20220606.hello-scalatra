@@ -1,6 +1,5 @@
-package com.github.kaznak
+package com.github.kaznak.lib
 
-import com.github.kaznak.util.{Config, ServerConfig}
 import org.scalatra.test.scalatest.ScalatraFunSuite
 
 class ConfigTests extends ScalatraFunSuite {

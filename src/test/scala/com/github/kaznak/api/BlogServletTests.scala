@@ -1,7 +1,7 @@
-package com.github.kaznak
+package com.github.kaznak.api
 
+import com.github.kaznak.lib.{Config, ServerConfig}
 import org.scalatra.test.scalatest._
-import com.github.kaznak.util.{Config, ServerConfig}
 
 class BlogServletTests extends ScalatraFunSuite {
   val serverConfig: ServerConfig = Config.load(None)

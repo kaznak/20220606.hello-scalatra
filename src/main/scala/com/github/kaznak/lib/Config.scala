@@ -1,4 +1,4 @@
-package com.github.kaznak.util
+package com.github.kaznak.lib
 
 import pureconfig.ConfigSource
 import pureconfig.ConfigSource.resources

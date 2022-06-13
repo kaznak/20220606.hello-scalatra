@@ -1,4 +1,4 @@
-package com.github.kaznak
+package com.github.kaznak.lib
 
 import com.typesafe.scalalogging.Logger
 

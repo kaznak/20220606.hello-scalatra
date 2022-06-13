@@ -1,8 +1,7 @@
-package com.github.kaznak
+package com.github.kaznak.api
 
+import com.github.kaznak.lib.{Logging, ServerConfig}
 import org.scalatra._
-import com.github.kaznak.Logging
-import com.github.kaznak.util.ServerConfig
 
 class BlogServlet(
     val serverConfig: ServerConfig
